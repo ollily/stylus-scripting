@@ -1,0 +1,6 @@
+
+pinterest without login
+
+Disables the login-screen and some other useless elements
+
+http://www.pinterest.com

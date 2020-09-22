@@ -1,0 +1,6 @@
+
+instagram without login
+
+Disables the login-screen and some other useless elements.
+
+http://www.instagram.com
