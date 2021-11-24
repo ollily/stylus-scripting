@@ -1,6 +1,6 @@
-Jenkins Compact Layout
+Jenkins Wide Layout
 
-Reduces the needed space on several pages for Jenkins and fixes some color issues.
+Removes some wide restriction while displaying pages in jenkins.
 
 2021-11-24
 
