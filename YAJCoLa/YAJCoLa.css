@@ -1,14 +1,12 @@
 /* ==UserStyle==
 @name           YAJCoLa - Yet Another Jenkins Compact Layout
 @description    Reduces the needed space on several pages for Jenkins and fixes some color issues.
-@name:de        YAJCoLa - Yet Another Jenkins Compact Layout
-@description:de Minimiert den Patz auf diversen Seiten von Jenkins und behebt eine Farbfehler
 @author         oglowa (https://github.com/oglowa)
-@version        2021-11-24
 @license        Apache License, Version 2.0
-@homepageURL    https://gist.github.com/oglowa/885570b3e1a2d5ff01e2f142386c0559
-@updateURL      https://gist.githubusercontent.com/oglowa/885570b3e1a2d5ff01e2f142386c0559/raw/7fdefdd08326be629a80936d085952de3c5638c5/YAJCoLa.css
-@supportURL     https://gist.github.com/oglowa/885570b3e1a2d5ff01e2f142386c0559
+@version        2021-11-24
+@homepageURL    https://github.com/ollily/stylus-scripting
+@updateURL      https://raw.githubusercontent.com/ollily/stylus-scripting/refs/heads/master/YAJCoLa/YAJCoLa.css
+@supportURL     https://github.com/ollily/stylus-scripting/issues
 @namespace      http://coding.glowa-net.com/appl/userstyle
 @preprocessor   default
 ==/UserStyle== */
