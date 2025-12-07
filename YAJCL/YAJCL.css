@@ -1,0 +1,159 @@
+/* ==UserStyle==
+@name           YAJCL - Yet Another Jenkins Console Layout
+@description    Beautifies the console output.
+@name:de        YAJCL - Yet Another Jenkins Console Layout
+@description:de Hübscht die Console Ausgabe auf.
+@version        2021-11-24
+@author         oglowa (https://github.com/oglowa)
+@license        Apache License, Version 2.0
+@homepageURL    https://gist.github.com/oglowa/bad9b544044290f75f96c8ba0dde376d
+@updateURL      https://gist.githubusercontent.com/oglowa/bad9b544044290f75f96c8ba0dde376d/raw/29ddce35043bf8b4e6840cf64bf85d2baa88857c/YAJCL.css
+@supportURL     https://gist.github.com/oglowa/bad9b544044290f75f96c8ba0dde376d
+@namespace      http://coding.glowa-net.com/appl/userstyle
+@preprocessor   default
+==/UserStyle== */
+
+@-moz-document regexp("^http.{0,1}://.+/jenkins/.*/console.*"),
+regexp("^http.{0,1}://.+/job/.*/console.*") {
+    /* Define the style */
+    :root {
+        --style-font-fam: "Consolas", "Droid Sans Mono", "Courier New", monospace;
+        --style-font-size: 9pt;
+        --style-font-height: 0.9rem;
+        --style-font-space: 0rem;
+        --style-panelside-bgcolor: #eeeeee;
+        --style-panelmain-bgcolor: #aaaaaa;
+        --style-panelmain-txtcolor: #007ad9;
+        --style-panel-border: 5px;
+        --style-main-bgcolor: #202020;
+        --style-main-txtcolor: #eeeeee;
+        --style-tstamp-txtcolor: #ffa0a0;
+        --style-link-txtcolor: #2e9e1c;
+        --style-node-txtcolor: #e4a12f;
+        --style-node-alt-txtcolor: #e4a12f61;
+        --style-node-alt2-txtcolor: #98c1e3;
+        --style-err-txtcolor: #5e1515;
+        --style-err-bgcolor: #eeeeee;
+        --style-menu-txtcolor: #ec1212;
+        --style-menu-bgcolor: #98c1e3;
+    }
+    
+    /* Reduce Sidepanel */
+    #side-panel {
+        padding: 15px 5px 0px 5px !important;
+        background-color: var(--style-panelside-bgcolor) !important;
+        width: 21em !important;
+        overflow: auto !important;
+    }
+    #side-panel,
+    #side-panel a {
+        font-size: 0.9em !important;
+        line-height: 1rem !important;
+    }
+    
+    /* Maximize Mainpanel */
+    #main-panel {
+        padding: 5px 5px 0px 5px!important;
+        margin-left: 0em !important;
+        background-color: var(--style-panelmain-bgcolor) !important;
+        color: var(--style-panelmain-txtcolor) !important;
+        border-radius: var(--style-panel-border) !important;
+        position: relative;
+        top: 0px;
+        left: 0px;
+    }
+    #main-panel .build-caption,
+    #main-panel .page-headline {
+        margin: 0 !important;
+        padding: 0 !important;
+        font-size: 1em !important;
+        height: 20px;
+    }
+    #side-panel img,
+    #main-panel img,
+    #main-panel svg {
+        height: 15px !important;
+        width: 15px !important;
+        padding: 0 !important;
+        margin: 10pt 0pt 0pt 1pt !important;
+    }
+    #menuSelector {
+        background-color: var(--style-menu-bgcolor) !important;
+        color: var(--style-menu-txtcolor) !important;
+    }
+
+    /* Now style the console */
+    .console-output,
+    .console-output pre
+    {
+        padding: 5px 3px;
+        background-color: var(--style-main-bgcolor) !important;
+        color: var(--style-main-txtcolor) !important;
+        border-radius: var(--style-panel-border) !important;
+        position: relative;
+        top: 0px;
+    }
+    .console-output,
+    .console-output pre,
+    .console-output a,
+    .console-output span,
+    .console-output .pipeline-new-node {
+        font-family: var(--style-font-fam) !important;
+        font-size: var(--style-font-size) !important;
+        line-height: var(--style-font-height) !important;
+        letter-spacing: var(--style-font-space) !important;
+        font-weight: normal !important;
+    }
+    .console-output .timestamp {
+        color: var(--style-tstamp-txtcolor) !important;
+        font-weight: lighter !important;
+        padding: 0 !important;
+        margin: 0 4pt 0 2pt !important;
+    }
+    .console-output .pipeline-new-node,
+    .console-output .pipeline-new-node a {
+        background-color: var(--style-main-bgcolor) !important;
+        color: var(--style-node-alt2-txtcolor) !important;
+        border-radius: var(--style-panel-border) !important;
+        font-weight: lighter !important;
+        padding: 0 1pt !important;
+        margin: 0 !important;
+    }
+    .console-output .pipeline-new-node a {
+        background-color: var(--style-node-txtcolor) !important;
+        color: var(--style-main-bgcolor) !important;
+        border-radius: var(--style-panel-border) !important;
+        visibility: visible !important;
+        padding: 0 2pt !important;
+        font-weight: bolder !important;
+    }
+    .console-output .pipeline-show-hide a {
+        background-color: var(--style-main-bgcolor) !important;
+        color: var(--style-node-alt-txtcolor) !important;
+        font-weight: lighter !important;
+    }
+    .console-output a {
+        color: var(--style-link-txtcolor) !important;
+        font-weight: normal;
+        text-decoration: underline;
+        padding: 0pt 2pt;
+    }
+    .console-output a:hover {
+        background-color: var(--style-link-txtcolor) !important;
+        color: var(--style-main-bgcolor) !important;
+        font-weight: bold;
+        border-radius: var(--style-panel-border) !important;
+    }
+    .console-output .warning-inline {
+        color: var(--style-node-txtcolor) !important;
+        border-radius: var(--style-panel-border) !important;
+    }
+    .console-output .error-inline {
+        color: var(--style-err-txtcolor) !important;
+        background-color: var(--style-err-bgcolor) !important;
+        padding: 0pt 2pt;
+        border-radius: var(--style-panel-border) !important;
+    }
+
+    /* i really want this to be global */
+}

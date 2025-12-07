@@ -1,0 +1,31 @@
+/* ==UserStyle==
+@name           MCD-My Compact Dashboard
+@description    My Compact Dashboard
+@name:de        MCD-Mein kompaCtes Dashboard
+@description:de Mein kompaCtes Dashboard
+@version        2023-12-21
+@author         oglowa (https://github.com/oglowa)
+@license        Apache License, Version 2.0
+@homepageURL    https://gist.github.com/oglowa/5fd1dfa7980a8b8063e98a696653f47a
+@updateURL      https://gist.github.com/oglowa/5fd1dfa7980a8b8063e98a696653f47a/raw/9c19016f72fcc930ef7badf88dcf37459a0b160a/my_compact_dashboard.user.js
+@updateURL      https://gist.github.com/oglowa/5fd1dfa7980a8b8063e98a696653f47a/raw/9c19016f72fcc930ef7badf88dcf37459a0b160a/my_compact_dashboard.css
+@supportURL     https://gist.github.com/oglowa/5fd1dfa7980a8b8063e98a696653f47a
+@namespace      http://coding.glowa-net.com/appl/userstyle
+@preprocessor   default
+==/UserStyle== */
+@-moz-document regexp("https\\:\\/\\/.*\\.atlassian\\.net\\/jira\\/dashboards\\/.+") {
+    body {
+        font-size: 10pt !important;
+    }
+    span, div, p, table, thead, tbody, tfooter, tr, th, td, pre {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        margin-left: 0.1em !important;
+        margin-right: 0em !important;
+
+        padding-top: 0 !important;
+        padding-bottom: 0.1em !important;
+        padding-left: 0 !important;
+        padding-right: 0.1em !important;
+    }
+}

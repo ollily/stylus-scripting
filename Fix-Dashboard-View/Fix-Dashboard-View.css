@@ -1,0 +1,23 @@
+/* ==UserStyle==
+@name           Fix-Dashboard-View
+@description    Dashboard Portlets are having wrong HTML
+@author         oglowa (https://github.com/oglowa)
+@version        2023-06-01
+@license        Apache License, Version 2.0
+@homepageURL    https://gist.github.com/oglowa/f7f019cd519e95f0938a3f62537fea84
+@updateURL      https://gist.githubusercontent.com/oglowa/f7f019cd519e95f0938a3f62537fea84/raw/f64b3ff2cd970158bda1424f3aaab6b0ae4f2d5f/Fix-Dashboard-View.css
+@supportURL     https://gist.github.com/oglowa/f7f019cd519e95f0938a3f62537fea84
+@namespace      http://coding.glowa-net.com/appl/userstyle
+@preprocessor   default
+==/UserStyle== */
+
+@-moz-document regexp(".+/view/02%20Failed%20Analysis/"), regexp(".+/view/01%20Failed%20Jobs/") {
+    #main-panel>table>tbody>tr>td {
+        max-width:500px !important
+    }
+    .jenkins-jobs-list__item__details__text, .jenkins-jobs-list__item, .jenkins-jobs-list__item__details, .jenkins-table__cell--tight
+    {
+        display: none !important;
+        visibility: hidden !important;
+    }
+}

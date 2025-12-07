@@ -1,0 +1,123 @@
+/* ==UserStyle==
+@name           YAJCoLa - Yet Another Jenkins Compact Layout
+@description    Reduces the needed space on several pages for Jenkins and fixes some color issues.
+@name:de        YAJCoLa - Yet Another Jenkins Compact Layout
+@description:de Minimiert den Patz auf diversen Seiten von Jenkins und behebt eine Farbfehler
+@author         oglowa (https://github.com/oglowa)
+@version        2021-11-24
+@license        Apache License, Version 2.0
+@homepageURL    https://gist.github.com/oglowa/885570b3e1a2d5ff01e2f142386c0559
+@updateURL      https://gist.githubusercontent.com/oglowa/885570b3e1a2d5ff01e2f142386c0559/raw/7fdefdd08326be629a80936d085952de3c5638c5/YAJCoLa.css
+@supportURL     https://gist.github.com/oglowa/885570b3e1a2d5ff01e2f142386c0559
+@namespace      http://coding.glowa-net.com/appl/userstyle
+@preprocessor   default
+==/UserStyle== */
+@-moz-document domain('www.jenkins.io'),
+regexp("^http.{0,1}://.+/jenkins/.*/(?!/.+/configure)"),
+regexp("^http.{0,1}://.+/view/.*/(?!/.+/configure)"),
+regexp("^http.{0,1}://.+/jenkins/$"),
+regexp("^http.{0,1}://.+-jenkins\\..+/$") {
+    td,
+    th,
+    div,
+    body,
+    p,
+    input {
+        font-family: Calibri, Helvetica, sans-serif;
+    }
+    .jenkins-table {
+        --table-padding: 0.1rem;
+    }
+    .jenkins-table td {
+        height: 0.3rem !important;
+    }
+    .tabBar .tab:first-child {
+        margin-left: 5px;
+    }
+    .tabBar .tab a {
+        padding: 2px 4px;
+        border: solid 1px #aaa !important;
+        border-bottom: solid 1px #aaa !important;
+        position: relative;
+    }
+
+    .tabBar .tab.active a {
+        border-bottom: solid 1px #eee !important;
+    }
+
+    .dashboard {
+        position: relative;
+    }
+
+    .dashboard #projectstatus-tabBar {
+        position: relative;
+        top: 1px;
+        z-index: 1;
+    }
+    .dashboard #projectstatus {
+        position: relative;
+        z-index: 0;
+    }
+
+    #projectstatus {
+        border: solid 1px #aaa !important;
+    }
+
+    img.icon-lg,
+    img.icon-md {
+        width: 16px !important;
+        height: 16px !important;
+    }
+
+    .bigtable td {
+        padding: 2px 4px;
+    }
+
+    #projectstatus th:nth-child(1) {
+        width: 24px;
+    }
+
+    #projectstatus th:nth-child(2) {
+        width: 24px;
+    }
+
+    #breadcrumbBar > div:nth-child(3),
+    #right-top-nav,
+    #breadcrumbs,
+    #breadcrumbs LI {
+        height: 1.3em;
+    }
+
+    #right-top-nav,
+    #breadcrumbs LI,
+    #breadcrumbs LI A {
+        line-height: 1.3em;
+    }
+
+    .pane-header,
+    .pane-footer {
+        padding-top: 3px;
+        padding-bottom: 3px;
+    }
+
+    #executors th.pane {
+        padding-top: 3px;
+        padding-bottom: 3px;
+    }
+    #executors td.pane {
+        padding-top: 1px;
+        padding-bottom: 1px;
+    }
+    /* Fix annoying color combination */
+    .node-name {
+        background-color: #eeeeee !important;
+        color: #000000 !important;
+    }
+    .node-name a {
+        color: #0000af !important;
+        text-decoration: underline;
+    }
+    .header {
+        background-color: #eeeeee !important;
+    }
+}
