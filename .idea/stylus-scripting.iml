@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/facebook-without-login" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/instagram-without-login" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/jenkins-compact-layout" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/jenkins-wide-layout" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/pinterest-without-login" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Fix-Dashboard-View" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MCD-My-Compact-Dashboard" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/YAJCL" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/YAJCoLa" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/rilan" isTestSource="false" />
+    </content>
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
