@@ -1,0 +1,82 @@
+/* ==UserStyle==
+@name           RILAN - Reddit Ignore Login & NSFW
+@description    Ignore the nagging login request and the NSFW blur
+@author         ollily (https://github.com/ollily)
+@license        Apache License, Version 2.0
+@version        2024-01-02
+@homepageURL    https://github.com/ollily/stylus-scripting
+@updateURL      https://raw.githubusercontent.com/ollily/stylus-scripting/refs/heads/master/rilan/rilan.css
+@supportURL     https://github.com/ollily/stylus-scripting/issues
+@namespace      http://coding.glowa-net.com/appl/userstyle
+@preprocessor   default
+==/UserStyle== */
+
+@-moz-document regexp("http(|s)\\:\\/\\/.*\\.reddit\\.com/(user|r)\\/.+") {
+    :root {
+        --blur-sm: 0;
+        --blur-normal: 0;
+        --blur-md: 0;
+        --blur-lg: 0;
+        --blur-xl: 0;
+        --blur-2xl: 0;
+        --blur-3xl: 0;
+    }
+    .theme-light.theme-rpl, .theme-rpl {
+        --blur-sm: 0;
+        --blur-normal: 0;
+        --blur-md: 0;
+        --blur-lg: 0;
+        --blur-xl: 0;
+        --blur-2xl: 0;
+        --blur-3xl: 0;
+    }
+    a:hover {
+        text-decoration: underline !important;
+    }
+    body>div[style*="fixed;"],
+    shreddit-experience-tree,
+    shreddit-async-loader,
+    .grecaptcha-badge {
+        display:none !important;
+        visibility: hidden !important;
+    }
+    body>div,
+    div.sidebar-grid, div.sidebar-grid div, .nsfw-stamp,
+    faceplate-img {
+        filter:none !important;
+        backdrop-filter:none !important;
+        pointer-events: all !important;
+    }
+    body,main,section,
+    #main-content,#left-sidebar-container,#right-sidebar-container,
+    reddit-breadcrumbs,xpromo-nsfw-blocking-container,
+    div.sidebar-grid, div.sidebar-grid div
+    {
+        overflow: auto !important;
+        height:auto !important;
+        pointer-events: all !important;
+        visibility: visible !important;
+        scrollbar-width: auto!important;
+        scrollbar-color: auto !important;
+        filter:none !important;
+        backdrop-filter:none !important;
+    }
+    #main-content,#left-sidebar-container,#right-sidebar-container{
+        overflow:auto !important;
+        height:100vh !important;
+        scrollbar-width: auto!important;
+        scrollbar-color: auto !important;
+    }
+    div.bg-media-background svg, div.bg-media-background {
+        display:none !important;
+        visibility: hidden !important;
+    }
+    shreddit-blurred-container,    shreddit-blurred-container span {
+        filter:none !important;
+        backdrop-filter:none !important;
+    }
+    .pointer-events-none {
+        pointer-events: all !important;
+    }
+    
+}
